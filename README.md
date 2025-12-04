@@ -83,13 +83,13 @@ mkdir -p data/raw data/processed data/templates
 The PDBbind dataset is required for training. Due to licensing requirements, please download directly from the official source.
 
 **For Academic Use:**
-1. Visit: http://www.pdbbind.org.cn/download.php
+1. Visit: https://www.pdbbind-plus.org.cn/download
 2. Register for a free academic account
 3. Download: `PDBbind_v2020_refined.tar.gz`
 4. Place in `data/raw/`
 
 **For Commercial Use:**
-1. Visit: http://www.pdbbind.org.cn/download.php
+1. Visit: https://www.pdbbind-plus.org.cn/download
 2. Contact PDBbind for commercial licensing information
 
 ### Step 3: Download Reaction Templates
