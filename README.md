@@ -171,9 +171,5 @@ CONFIG = {
 
 If you use ReACT-Drug in your research, please cite:
 ```bibtex
-@article{yadunandan2025react,
-  title={ReACT-Drug: Reaction-Template Guided Reinforcement Learning for de novo Drug Design},
-  author={Yadunandan, R and Ghosh, Nimisha},
-  year={2025}
-}
+
 ```
