@@ -37,7 +37,7 @@ conda activate react-drug
 # Install dependencies
 pip install -r requirements.txt
 
-# Install AutoDock Vina (optional, for docking)
+# Install AutoDock Vina (for docking)
 conda install -c conda-forge autodock-vina
 
 # Install Open Babel
