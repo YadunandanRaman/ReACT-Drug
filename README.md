@@ -27,7 +27,7 @@ ReACT-Drug is an end-to-end RL framework that combines deep representation learn
 ## Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ReACT-Drug.git
+git clone https://github.com/YadunandanRaman/ReACT-Drug.git
 cd ReACT-Drug
 
 # Create conda environment
