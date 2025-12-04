@@ -142,17 +142,6 @@ CONFIG = {
 }
 ```
 
-## Results
-
-Example results on benchmark targets:
-
-| Target | Mean Binding (kcal/mol) | Best Binding | Avg QED | High-Affinity Count |
-|--------|------------------------|--------------|---------|---------------------|
-| 5-HT1B | -9.3 | -11.2 | 0.32 | 45 |
-| 5-HT2B | -9.2 | -10.8 | 0.35 | 38 |
-| ACM2   | -10.3 | -11.5 | 0.28 | 62 |
-| AKT1   | -9.1 | -10.4 | 0.41 | 35 |
-| DRD2   | -9.9 | -11.1 | 0.33 | 52 |
 
 ## Citation
 
