@@ -14,7 +14,6 @@ ReACT-Drug is an end-to-end RL framework that combines deep representation learn
 3. **Grows molecules** using ChEMBL-derived reaction templates
 4. **Optimizes** for binding affinity (AutoDock Vina), drug-likeness (QED), synthetic accessibility, and novelty
 
-![Pipeline](docs/pipeline.png)
 
 ## Features
 
