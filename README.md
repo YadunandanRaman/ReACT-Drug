@@ -47,9 +47,9 @@ conda install -c conda-forge openbabel
 ## Directory Structure
 ```
 ReACT-Drug/
-├── data/
+├── data/                 # Create this directory (see Data Preparation)
 │   ├── raw/              # PDBbind tar.gz and PDB files
-│   ├── processed/        # Processed binding data
+│   ├── processed/        # Processed binding data (auto-generated)
 │   └── templates/        # Place drug_templates.pkl here
 ├── src/
 │   ├── __init__.py
@@ -71,26 +71,52 @@ ReACT-Drug/
 
 ## Data Preparation
 
-### 1. PDBbind Dataset
+> **Note:** The `data/` directory is not included in this repository due to file size and licensing restrictions. You must create it and download the required files manually.
 
-Download the PDBbind v2020 refined set:
+### Step 1: Create Data Directories
 ```bash
-# Download from http://www.pdbbind.org.cn/download/
-# Place PDBbind_v2020_refined.tar.gz in data/raw/
+mkdir -p data/raw data/processed data/templates
 ```
 
-### 2. Reaction Templates
+### Step 2: Download PDBbind Dataset
 
-Generate ChEMBL-derived templates:
+The PDBbind dataset is required for training. Due to licensing requirements, please download directly from the official source.
+
+**For Academic Use:**
+1. Visit: http://www.pdbbind.org.cn/download.php
+2. Register for a free academic account
+3. Download: `PDBbind_v2020_refined.tar.gz`
+4. Place in `data/raw/`
+
+**For Commercial Use:**
+1. Visit: http://www.pdbbind.org.cn/download.php
+2. Contact PDBbind for commercial licensing information
+
+### Step 3: Download Reaction Templates
+
+Download the pre-computed ChEMBL-derived reaction templates:
+
+📥 **[Download drug_templates.pkl](https://drive.google.com/file/d/1Q1LCFhAhu873oj5ubJ_wcC63VcxuMPSy/view?usp=share_link)**
+
+Place the downloaded file in `data/templates/`
+
+**Alternative:** Generate templates yourself using ChEMBL data:
 ```bash
-# First, create the ChEMBL MMP database
-# Download ChEMBL molecules and process with mmpdb
-
-# Then run template extraction
 python scripts/generate_templates.py
 ```
 
-Or download pre-computed templates from [releases].
+### Verify Setup
+
+After completing the above steps, your data directory should look like:
+```
+data/
+├── raw/
+│   └── PDBbind_v2020_refined.tar.gz
+├── processed/
+│   └── (empty - will be auto-generated on first run)
+└── templates/
+    └── drug_templates.pkl
+```
 
 ## Usage
 
@@ -141,7 +167,6 @@ CONFIG = {
 }
 ```
 
-
 ## Citation
 
 If you use ReACT-Drug in your research, please cite:
@@ -150,5 +175,5 @@ If you use ReACT-Drug in your research, please cite:
   title={ReACT-Drug: Reaction-Template Guided Reinforcement Learning for de novo Drug Design},
   author={Yadunandan, R and Ghosh, Nimisha},
   year={2025}
-}```
-  
+}
+```
