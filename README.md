@@ -167,9 +167,3 @@ CONFIG = {
 }
 ```
 
-## Citation
-
-If you use ReACT-Drug in your research, please cite:
-```bibtex
-
-```
